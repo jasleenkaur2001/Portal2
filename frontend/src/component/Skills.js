@@ -50,7 +50,6 @@ const printReqSkills = (props1, props2) => {
     reqSkills.delete(props1[i].toLowerCase().trim());
   }
   if ((reqSkills.size === 0)) {
-    // all skills  
     var length = allSkills.length;
     var skil = "";
 
@@ -61,8 +60,6 @@ const printReqSkills = (props1, props2) => {
     return skil;
   }
   else {
-    // req skills
-
     var length = reqSkills.length;
     var skil = "";
 
@@ -189,7 +186,11 @@ const Skills = (props) => {
         <Grid item xs>
           <Grid container direction="column" alignItems="center" spacing={3}>
             <Typography variant="h3"> My Skills</Typography>
-            <Typography variant="h5" style={{textAlign: "center"}}>{printSkills(SkillsDetails.skills)}</Typography>
+               <Grid item>
+            {SkillsDetails.skills.map((skill) => (
+              <Chip label={skill} style={{ marginRight: "3px" , textAlign: "center" ,fontSize: 17,padding :'5px', }} />
+            ))}
+          </Grid>
           </Grid>
         </Grid>
       </Grid>
@@ -208,9 +209,16 @@ const Skills = (props) => {
               <Typography variant="h5" style={{textAlign: "center"}}>
                 {printReqSkills(SkillsDetails.skills, jobs)}
               </Typography>
+            //   <Grid item >
+            //     {printReqSkills(SkillsDetails.skills, jobs).forEach(reqskill => {
+            //     <Chip label={reqskill} style={{ marginRight: "3px" , textAlign: "center" ,fontSize: 17,padding :'5px' }} />
+            //     }
+            //     )
+            //   }
+            // </Grid>
             ) : (
               <Typography variant="h5" style={{ textAlign: "center" }}>
-                No jobs found
+                No Jobs found to look for Skills.
               </Typography>
             )}
 
