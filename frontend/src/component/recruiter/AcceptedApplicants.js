@@ -23,7 +23,7 @@ import axios from "axios";
 import FilterListIcon from "@material-ui/icons/FilterList";
 import ArrowUpwardIcon from "@material-ui/icons/ArrowUpward";
 import ArrowDownwardIcon from "@material-ui/icons/ArrowDownward";
-
+import img from '../../images/download.png';
 import { SetPopupContext } from "../../App";
 
 import apiList, { server } from "../../lib/apiList";
@@ -45,6 +45,7 @@ const useStyles = makeStyles((theme) => ({
     margin: "20px 0",
     boxSizing: "border-box",
     width: "100%",
+    backgroundImage: `url(${img})`,
   },
   popupDialog: {
     height: "100%",

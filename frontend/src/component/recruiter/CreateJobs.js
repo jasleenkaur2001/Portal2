@@ -11,14 +11,17 @@ import {
 } from "@material-ui/core";
 import axios from "axios";
 import ChipInput from "material-ui-chip-input";
-
+import img from '../../images/download.png';
 import { SetPopupContext } from "../../App";
 
 import apiList from "../../lib/apiList";
 
 const useStyles = makeStyles((theme) => ({
   body: {
-    height: "inherit",
+    padding: "60px 60px",
+    width: '100%',
+    backgroundImage: `url(${img})`,
+    opacity: 0.9,
   },
   popupDialog: {
     height: "100%",
@@ -92,6 +95,7 @@ const CreateJobs = (props) => {
 
   return (
     <>
+   <Paper elevation={3} className={classes.body}>
       <Grid
         container
         item
@@ -258,6 +262,7 @@ const CreateJobs = (props) => {
           </Grid>
         </Grid>
       </Grid>
+      </Paper>
     </>
   );
 };

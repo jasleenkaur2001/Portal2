@@ -28,7 +28,7 @@ import ArrowDownwardIcon from "@material-ui/icons/ArrowDownward";
 import { SetPopupContext } from "../../App";
 
 import apiList from "../../lib/apiList";
-
+import img from '../../images/download.png';
 const useStyles = makeStyles((theme) => ({
   body: {
     height: "inherit",
@@ -42,6 +42,7 @@ const useStyles = makeStyles((theme) => ({
     margin: "20px 0",
     boxSizing: "border-box",
     width: "100%",
+    backgroundImage: `url(${img})`,
   },
   popupDialog: {
     height: "100%",

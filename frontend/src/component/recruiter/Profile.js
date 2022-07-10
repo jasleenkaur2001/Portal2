@@ -15,10 +15,12 @@ import "react-phone-input-2/lib/material.css";
 import { SetPopupContext } from "../../App";
 
 import apiList from "../../lib/apiList";
-
+import img from '../../images/download.png';
 const useStyles = makeStyles((theme) => ({
   body: {
     height: "inherit",
+    backgroundImage: `url(${img})`,
+    width: '100%',
   },
   popupDialog: {
     height: "100%",
@@ -116,6 +118,7 @@ const Profile = (props) => {
 
   return (
     <>
+    <Paper className={classes.body} elevation={3}>
       <Grid
         container
         item
@@ -195,6 +198,7 @@ const Profile = (props) => {
           </Paper>
         </Grid>
       </Grid>
+      </Paper>
     </>
   );
 };
