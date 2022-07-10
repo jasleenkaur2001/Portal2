@@ -328,7 +328,18 @@ const Login = (props) => {
     <Redirect to="/" />
   ) : (
     <Paper elevation={3} className={classes.body}>
+       
       <Grid container direction="column" spacing={4} alignItems="center">
+      <Paper
+            style={{
+              padding: "20px",
+              outline: "none",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
         <Grid item>
           <Typography variant="h3" component="h2">
             Sign Up
@@ -492,6 +503,7 @@ const Login = (props) => {
             Signup
           </Button>
         </Grid>
+        </Paper>
       </Grid>
     </Paper>
   );

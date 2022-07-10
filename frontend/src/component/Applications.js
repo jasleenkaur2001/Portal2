@@ -17,7 +17,9 @@ import {
   Checkbox,
 } from "@material-ui/core";
 import Rating from "@material-ui/lab/Rating";
+import img from '../images/download.png';
 import axios from "axios";
+
 
 import { SetPopupContext } from "../App";
 
@@ -25,7 +27,10 @@ import apiList from "../lib/apiList";
 
 const useStyles = makeStyles((theme) => ({
   body: {
-    height: "inherit",
+    padding: "60px 60px",
+    width: '100%',
+    backgroundImage: `url(${img})`,
+    opacity: 0.9,
   },
   statusBlock: {
     width: "100%",
@@ -40,6 +45,7 @@ const useStyles = makeStyles((theme) => ({
     margin: "20px 0",
     boxSizing: "border-box",
     width: "100%",
+    backgroundImage: `url(${img})`,
   },
   popupDialog: {
     height: "100%",

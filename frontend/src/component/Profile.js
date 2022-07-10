@@ -13,7 +13,8 @@ import ChipInput from "material-ui-chip-input";
 import FileUploadInput from "../lib/FileUploadInput";
 import DescriptionIcon from "@material-ui/icons/Description";
 import FaceIcon from "@material-ui/icons/Face";
-
+import img from '../images/white.jpeg';
+import img2 from '../images/download.png';
 import { SetPopupContext } from "../App";
 
 import apiList from "../lib/apiList";
@@ -216,12 +217,24 @@ const Profile = (props) => {
 
   return (
     <>
+    <Paper
+            style={{
+              padding: "20px",
+              outline: "none",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+              backgroundImage: `url(${img2})`,
+              width: '100%'
+            }}
+          >
       <Grid
         container
         item
         direction="column"
         alignItems="center"
-        style={{ padding: "30px", minHeight: "93vh" }}
+        style={{ padding: "30px", minHeight: "93vh" }} 
       >
         <Grid item>
           <Typography variant="h2">Profile</Typography>
@@ -235,6 +248,7 @@ const Profile = (props) => {
               flexDirection: "column",
               justifyContent: "center",
               alignItems: "center",
+              
             }}
           >
             <Grid container direction="column" alignItems="stretch" spacing={3}>
@@ -308,6 +322,7 @@ const Profile = (props) => {
           </Paper>
         </Grid>
       </Grid>
+      </Paper>
       {/* <Modal open={open} onClose={handleClose} className={classes.popupDialog}> */}
 
       {/* </Modal> */}

@@ -16,6 +16,7 @@ import {
   MenuItem,
   Checkbox,
 } from "@material-ui/core";
+import img from '../images/download.png';
 import Rating from "@material-ui/lab/Rating";
 import Pagination from "@material-ui/lab/Pagination";
 import axios from "axios";
@@ -42,6 +43,8 @@ const useStyles = makeStyles((theme) => ({
     margin: "20px 0",
     boxSizing: "border-box",
     width: "100%",
+    backgroundImage: `url(${img})`,
+    opacity: 0.9,
   },
   popupDialog: {
     height: "100%",
