@@ -19,6 +19,11 @@ let schema = new mongoose.Schema(
       enum: ["recruiter", "applicant"],
       required: true,
     },
+    // type: {
+    //   type: String,
+    //   enum: ["recruiter", "applicant"],
+    //   required: true,
+    // },
   },
   { collation: { locale: "en" } }
 );
@@ -31,7 +36,13 @@ schema.pre("save", function (next) {
   if (!user.isModified("password")) {
     return next();
   }
-
+  // bcrypt.hash(user.password, 10, (err, hash) => {
+  //   if (err) {
+  //     return next(err);
+  //   }
+  //   user.password = hash;
+  //   next();
+  // })
   bcrypt.hash(user.password, 10, (err, hash) => {
     if (err) {
       return next(err);

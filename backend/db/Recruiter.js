@@ -19,6 +19,14 @@ let schema = new mongoose.Schema(
         msg: "Phone number is invalid!",
       },
     },
+    // contactNumber: {
+    //   type: String,
+    //   validate: {
+    //     validator: function (v) {
+    //       return true;
+    //     },
+    //     msg: "Phone number is invalid!",
+    //   },}
     bio: {
       type: String,
     },

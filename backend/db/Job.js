@@ -25,6 +25,21 @@ let schema = new mongoose.Schema(
         },
       ],
     },
+    // maxApplicants: {
+    //   type: Number,
+    //   validate: [
+    //     {
+    //       validator: Number.isInteger,
+    //       msg: "maxApplicants should be an integer",
+    //     },
+    //     {
+    //       validator: function (value) {
+    //         return value > 0;
+    //       },
+    //       msg: "maxApplicants should greater than 0",
+    //     },
+    //   ],
+    // },
     maxPositions: {
       type: Number,
       validate: [
