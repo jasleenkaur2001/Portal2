@@ -9,6 +9,10 @@ const jwtAuth = (req, res, next) => {
       res.status(401).json(info);
       return;
     }
+    // if (!user) {
+    //   res.status(405).json(info);
+    //   return;
+    // }
     req.user = user;
     next();
   })(req, res, next);

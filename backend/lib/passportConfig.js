@@ -18,6 +18,17 @@ const filterJson = (obj, unwantedKeys) => {
   return filteredObj;
 };
 
+// const filterJson = (obj, unwantedKeys) => {
+//   const filteredObj = {};
+//   Object.keys(obj).forEach((key) => {
+//     if (unwantedKeys.indexOf(key) === -1) {
+//       filteredObj[key] = obj[key];
+//     }
+//   });
+//   return filteredObj;
+// };
+
+
 passport.use(
   new Strategy(
     {
